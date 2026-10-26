@@ -22,7 +22,7 @@ Para generar la versión de publicación: `npm run build`. El resultado queda en
 
 ## Publicación
 
-Enlace de Vercel: pendiente de publicar el repositorio TP2.
+Enlace de Vercel: portfolioreact-three-pi.vercel.app
 
 ## Uso de inteligencia artificial
 
