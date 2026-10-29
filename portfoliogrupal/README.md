@@ -17,7 +17,7 @@ Para generar la versión de publicación: `npm run build`. El resultado queda en
 
 - David Thomen — [DavidLG89](https://github.com/DavidLG89).
 - Rocío Palagano — [RPalagano](https://github.com/RPalagano).
-- DantePufahl — [DantePufahl](https://github.com/DantePufahl).
+- Dante Pufahl — [DantePufahl](https://github.com/DantePufahl).
 - Candela Daubler — [CandeDaubler](https://github.com/CandeDaubler).
 
 ## Publicación
