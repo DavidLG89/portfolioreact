@@ -445,3 +445,31 @@ h1, h2, h3, .arcade-font {
   font-size: 0.8rem;
   color: #6d7899;
 }
+
+/* Tratamiento unificado para los retratos de portada y perfiles */
+.player-avatar-box,
+.profile-avatar-large {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.player-avatar-box img,
+.profile-avatar-large img {
+  filter: saturate(0.86) contrast(1.08) brightness(0.96);
+  transition: filter 0.25s ease;
+}
+
+.player-avatar-box::after,
+.profile-avatar-large::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(135deg, rgba(0, 240, 255, 0.2), transparent 52%, rgba(255, 0, 119, 0.16)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 4px);
+  content: '';
+  mix-blend-mode: screen;
+  pointer-events: none;
+}

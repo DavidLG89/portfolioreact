@@ -6,6 +6,7 @@ Aplicación grupal desarrollada en React que continúa el proyecto arcade de TP1
 
 - [Proyecto](#proyecto)
 - [Capturas](#capturas)
+- [Recursos visuales](#recursos-visuales)
 - [Ejecución local](#ejecución-local)
 - [Integrantes y responsabilidades](#integrantes-y-responsabilidades)
 - [Publicación](#publicación)
@@ -14,6 +15,14 @@ Aplicación grupal desarrollada en React que continúa el proyecto arcade de TP1
 ## Proyecto
 
 La aplicación conserva la identidad visual arcade del equipo y organiza sus secciones mediante una barra lateral compartida. Incluye perfiles individuales, un catálogo leído desde un JSON local, una consulta a la API pública FreeToGame y una bitácora del proceso.
+
+## Recursos visuales
+
+El equipo creó o adaptó para el proyecto estas imágenes personalizadas:
+
+- **Ilustración del equipo** ([PortadaDevTeam.png](public/img/PortadoDevTeam.png)), para la identidad arcade.
+- **Retrato arcade de David** ([david retro.webp](public/img/david%20retro.webp)), para el perfil P1.
+- Los cuatro retratos conservan sus fotografías originales y reciben en la app un tratamiento común de color, marco y scanlines.
 
 ## Capturas
 
