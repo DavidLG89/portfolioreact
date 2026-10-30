@@ -496,3 +496,218 @@
     padding-inline: 1rem;
   }
 }
+
+/* Árbol de componentes */
+.tree-root {
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+
+.tree-list,
+.tree-list ul {
+  margin: 0;
+  padding-left: 1.35rem;
+  list-style: none;
+}
+
+.tree-list {
+  width: fit-content;
+  min-width: min(100%, 360px);
+  padding-left: 0;
+}
+
+.tree-list ul {
+  margin-left: 0.65rem;
+  border-left: 1px solid var(--border-arcade);
+}
+
+.tree-item {
+  position: relative;
+  padding: 0.45rem 0 0.1rem 1rem;
+}
+
+.tree-item > .tree-node::before {
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  width: 0.75rem;
+  border-top: 1px solid var(--border-arcade);
+  content: '';
+}
+
+.tree-list > .tree-item {
+  padding-left: 0;
+}
+
+.tree-list > .tree-item > .tree-node {
+  border-color: var(--neon-pink);
+  color: var(--neon-yellow);
+  font-family: var(--font-arcade);
+  font-size: 0.68rem;
+}
+
+/* Diagrama jerárquico de componentes */
+.component-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1rem 0 2rem;
+}
+
+.component-tree-root,
+.component-tree-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--neon-cyan);
+  border-radius: 7px;
+  background: #11182a;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.component-tree-root {
+  min-width: 150px;
+  border: 2px solid var(--neon-pink);
+  color: var(--neon-yellow);
+  font-family: var(--font-arcade);
+  font-size: 0.72rem;
+}
+
+.component-tree-pages,
+.component-tree-children {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.component-tree-pages {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 1rem;
+}
+
+.component-tree-page {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 0.7rem;
+  border: 1px solid var(--border-arcade);
+  border-radius: 8px;
+  background: rgba(17, 24, 42, 0.55);
+  text-align: center;
+}
+
+.component-tree-page > .component-tree-node {
+  width: 100%;
+  border-color: var(--border-arcade);
+  font-weight: 700;
+}
+
+.component-tree-children {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border-arcade);
+}
+
+.component-tree-child .component-tree-node {
+  min-height: 34px;
+  padding: 0.4rem 0.65rem;
+  border-color: var(--neon-purple);
+  font-size: 0.88rem;
+}
+
+.component-tree-node small {
+  margin-left: 0.35rem;
+  color: var(--neon-yellow);
+  font-size: 0.75rem;
+}
+
+/* Árbol de componentes con ramas y conectores */
+.render-tree {
+  max-width: 760px;
+  overflow-x: auto;
+  padding: 0.5rem 0 1.5rem 0.5rem;
+}
+
+.render-tree-root,
+.render-tree-node {
+  position: relative;
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--neon-cyan);
+  border-radius: 6px;
+  background: #11182a;
+  color: var(--text-main);
+}
+
+.render-tree-root {
+  min-width: 120px;
+  justify-content: center;
+  border: 2px solid var(--neon-pink);
+  color: var(--neon-yellow);
+  font-family: var(--font-arcade);
+  font-size: 0.68rem;
+}
+
+.render-tree-root::after {
+  position: absolute;
+  top: 100%;
+  left: 1.35rem;
+  height: 1.1rem;
+  border-left: 1px solid var(--border-arcade);
+  content: '';
+}
+
+.render-tree-list {
+  position: relative;
+  margin: 0 0 0 1.35rem;
+  padding: 0 0 0 1.35rem;
+  border-left: 1px solid var(--border-arcade);
+  list-style: none;
+}
+
+.render-tree-item {
+  position: relative;
+  padding: 0.45rem 0 0.55rem 0;
+}
+
+.render-tree-item::before {
+  position: absolute;
+  top: 1.45rem;
+  left: -1.35rem;
+  width: 1.35rem;
+  border-top: 1px solid var(--border-arcade);
+  content: '';
+}
+
+.render-tree-item > .render-tree-node {
+  font-size: 0.95rem;
+}
+
+.render-tree-item > .render-tree-list {
+  margin-top: 0.35rem;
+}
+
+.render-tree-item > .render-tree-list > .render-tree-item {
+  padding-top: 0.35rem;
+  padding-bottom: 0.25rem;
+}
+
+.render-tree-item > .render-tree-list > .render-tree-item::before {
+  top: 1.3rem;
+}
