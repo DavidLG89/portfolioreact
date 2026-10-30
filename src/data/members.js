@@ -18,7 +18,7 @@ export const members = [
     role: 'Desarrolladora Full-Stack',
     specialty: 'Back End',
     location: 'Buenos Aires Capital',
-    image: '/img/Rocio.jpg',
+    image: '/img/Rocio.webp',
     skills: ['Arquitectura de APIs RESTful', 'Modelado de bases de datos SQL', 'Desarrollo Full-Stack', 'Integración de servicios'],
     favorites: ['Lilo y Stitch', 'Mente siniestra', 'Una menta brillante', 'Black Album', 'Severed Ties', 'United Abominations'],
     color: 'pink',

@@ -7,12 +7,10 @@ import './styles/profile.css';
 import './styles/bitacora.css';
 import './styles/responsive.css';
 import './App.css';
-import App from './App.jsx';
+import App from './app/App.jsx';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <BrowserRouter><App /></BrowserRouter>
   </React.StrictMode>,
 );
