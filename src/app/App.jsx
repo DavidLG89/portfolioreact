@@ -1,13 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Sidebar from '../components/layout/Sidebar.jsx';
-import HomePage from '../pages/HomePage.jsx';
-import ProfilePage from '../pages/ProfilePage.jsx';
-import CatalogPage from '../pages/CatalogPage.jsx';
-import PublicApiPage from '../pages/PublicApiPage.jsx';
-import ComponentTreePage from '../pages/ComponentTreePage.jsx';
-import JournalPage from '../pages/JournalPage.jsx';
-import NotFoundPage from '../pages/NotFoundPage.jsx';
+import AppLayout from '../components/layout/AppLayout.jsx';
+import AppRoutes from './AppRoutes.jsx';
 
 export default function App() {
   const [credits, setCredits] = useState(() => Number(sessionStorage.getItem('arcade_credits')) || 2);
@@ -42,21 +35,14 @@ export default function App() {
   }
 
   return (
-    <div className="app-shell">
-      <Sidebar credits={credits} sound={sound} onSound={() => setSound(!sound)} scanlines={scanlines} onScanlines={() => setScanlines(!scanlines)} />
-      <main className="app-main">
-        <div className="app-topbar"><span>SISTEMA: <b>DEV-ARCADE v2.0</b></span><span>STATUS: <b className="status-online">ONLINE</b></span></div>
-        <Routes>
-          <Route path="/" element={<HomePage onInsertCoin={insertCoin} />} />
-          <Route path="/integrantes/:id" element={<ProfilePage onInsertCoin={insertCoin} />} />
-          <Route path="/recursos" element={<CatalogPage />} />
-          <Route path="/api" element={<PublicApiPage />} />
-          <Route path="/arbol" element={<ComponentTreePage />} />
-          <Route path="/bitacora" element={<JournalPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-        <footer className="app-footer">TU MÁQUINA RETRO DEV <span>INSERT COIN → START → CODE → REPEAT</span></footer>
-      </main>
-    </div>
+    <AppLayout
+      credits={credits}
+      sound={sound}
+      onSound={() => setSound(!sound)}
+      scanlines={scanlines}
+      onScanlines={() => setScanlines(!scanlines)}
+    >
+      <AppRoutes onInsertCoin={insertCoin} />
+    </AppLayout>
   );
 }

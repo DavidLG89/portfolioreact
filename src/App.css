@@ -685,9 +685,9 @@
   font-size: 0.75rem;
 }
 
-/* Árbol de componentes con ramas y conectores */
+/* Component tree branches connect to children and stop at the final node. */
 .render-tree {
-  max-width: 760px;
+  max-width: 920px;
   overflow-x: auto;
   padding: 0.5rem 0 1.5rem 0.5rem;
 }
@@ -718,27 +718,43 @@
   position: absolute;
   top: 100%;
   left: 1.35rem;
-  height: 1.1rem;
+  height: 2.7rem;
   border-left: 1px solid var(--border-arcade);
   content: '';
 }
 
 .render-tree-list {
   position: relative;
-  margin: 0 0 0 1.35rem;
-  padding: 0 0 0 1.35rem;
-  border-left: 1px solid var(--border-arcade);
+  margin: 0.35rem 0 0 1.35rem;
+  padding: 0.45rem 0 0.45rem 1.35rem;
   list-style: none;
+}
+
+.render-tree-list::before {
+  position: absolute;
+  top: -0.35rem;
+  bottom: 2.2rem;
+  left: 0;
+  border-left: 1px solid var(--border-arcade);
+  content: '';
+}
+
+.render-tree-root-list {
+  margin-top: 0.5rem;
+}
+
+.render-tree-root-list::before {
+  top: 2.2rem;
 }
 
 .render-tree-item {
   position: relative;
-  padding: 0.45rem 0 0.55rem 0;
+  padding: 0.45rem 0;
 }
 
 .render-tree-item::before {
   position: absolute;
-  top: 1.45rem;
+  top: 1.75rem;
   left: -1.35rem;
   width: 1.35rem;
   border-top: 1px solid var(--border-arcade);
@@ -747,19 +763,6 @@
 
 .render-tree-item > .render-tree-node {
   font-size: 0.95rem;
-}
-
-.render-tree-item > .render-tree-list {
-  margin-top: 0.35rem;
-}
-
-.render-tree-item > .render-tree-list > .render-tree-item {
-  padding-top: 0.35rem;
-  padding-bottom: 0.25rem;
-}
-
-.render-tree-item > .render-tree-list > .render-tree-item::before {
-  top: 1.3rem;
 }
 
 .sidebar-top {

@@ -61,11 +61,10 @@ Como equipo usamos **GitHub Copilot en Visual Studio Code**, con **Claude** como
 
 | Integrante | Aplicación y modelo | Tareas en las que se usó como apoyo |
 |---|---|---|
-| David Thomen | GitHub Copilot · Claude | Alternativas para datos, APIs y conceptos de backend. |
+| David Thomen | GitHub Copilot · Claude; OpenAI Codex · GPT-6 | Apoyo en revisión y mejoras de React, catálogo y documentación. |
 | Rocío Palagano | GitHub Copilot · Claude | Dudas de integración full-stack y consumo de datos. |
 | Dante Pufahl | GitHub Copilot · Claude | Componentes React, JSX, estilos y experiencia de interfaz. |
 | Candela Daubler | GitHub Copilot · Claude | Ideas de interacción, presentación visual y experiencia arcade. |
 
-En esta revisión también se utilizó **OpenAI Codex (GPT-6)** como asistencia para organizar componentes, actualizar los perfiles, rehacer el árbol de componentes y preparar estas capturas y documentación.
 
 Las decisiones, la selección de propuestas y la revisión e integración de los cambios estuvieron a cargo del equipo. La IA fue un recurso de apoyo.
