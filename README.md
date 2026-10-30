@@ -53,7 +53,7 @@ El resultado queda en `dist/`.
 
 ## Publicación
 
-[Ver la aplicación en Vercel](https://portfolioreact-three-pi.vercel.app)
+[Ver la aplicación en Vercel](https://portfolioreact-g27.vercel.app)
 
 ## Declaración de uso de IA
 
