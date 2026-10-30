@@ -249,7 +249,7 @@
 
 .catalog-controls {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(180px, 0.6fr) auto;
+  grid-template-columns: minmax(200px, 1fr) minmax(180px, 0.6fr) auto auto;
   align-items: end;
   gap: 1rem;
   margin-bottom: 1.4rem;
@@ -282,6 +282,16 @@
   font-size: 0.55rem;
 }
 
+.catalog-reset {
+  min-height: 42px;
+  white-space: nowrap;
+}
+
+.catalog-reset:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -296,6 +306,33 @@
 
 .resource-card p {
   margin: 0;
+}
+
+.resource-more {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border-arcade);
+}
+
+.resource-more summary {
+  width: fit-content;
+  color: var(--neon-cyan);
+  cursor: pointer;
+  font-family: var(--font-arcade);
+  font-size: 0.58rem;
+}
+
+.resource-more summary:focus-visible {
+  outline: 2px solid var(--neon-yellow);
+  outline-offset: 4px;
+}
+
+.resource-more[open] summary {
+  margin-bottom: 0.65rem;
+}
+
+.resource-more p {
+  line-height: 1.6;
 }
 
 .resource-type {
@@ -471,6 +508,19 @@
 
   .sidebar-footer {
     margin-top: 0;
+  }
+
+  .catalog-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .catalog-reset {
+    justify-self: start;
+  }
+
+  .catalog-count {
+    align-self: center;
+    padding-bottom: 0;
   }
 
   .app-main .profile-sections-grid {

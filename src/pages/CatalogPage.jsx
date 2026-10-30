@@ -6,9 +6,10 @@ export default function CatalogPage() {
   const [query, setQuery] = useState('');
   const [type, setType] = useState('Todas');
   const types = [...new Set(resources.map((item) => item.type))];
+  const hasFilters = Boolean(query.trim()) || type !== 'Todas';
   const filtered = useMemo(
     () => resources.filter((item) => (type === 'Todas' || item.type === type)
-      && `${item.name} ${item.description} ${item.type}`.toLowerCase().includes(query.trim().toLowerCase())),
+      && `${item.name} ${item.description} ${item.type} ${item.details}`.toLowerCase().includes(query.trim().toLowerCase())),
     [query, type],
   );
 
@@ -18,9 +19,17 @@ export default function CatalogPage() {
       <div className="catalog-controls">
         <label>BUSCAR<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Ej.: React, diseño..." /></label>
         <label>FILTRAR POR TIPO<select value={type} onChange={(event) => setType(event.target.value)}><option>Todas</option>{types.map((itemType) => <option key={itemType}>{itemType}</option>)}</select></label>
+        <button
+          className="btn-arcade btn-outline catalog-reset"
+          type="button"
+          onClick={() => { setQuery(''); setType('Todas'); }}
+          disabled={!hasFilters}
+        >
+          LIMPIAR FILTROS
+        </button>
         <span className="catalog-count">{filtered.length} / {resources.length} RECURSOS</span>
       </div>
-      <div className="resource-grid">{filtered.map((item) => <article className="resource-card" key={item.id}><span className="resource-type">{item.type}</span><h2>{item.name}</h2><p>{item.description}</p></article>)}</div>
+      <div className="resource-grid">{filtered.map((item) => <article className="resource-card" key={item.id}><span className="resource-type">{item.type}</span><h2>{item.name}</h2><p>{item.description}</p><details className="resource-more"><summary>VER DETALLE</summary><p>{item.details}</p></details></article>)}</div>
       {filtered.length === 0 && <p className="empty-state">No encontramos recursos con esos criterios. Probá otra búsqueda o filtro.</p>}
     </div>
   );

@@ -1,22 +1,142 @@
 [
-  { "id": 1, "name": "Java", "type": "Lenguaje", "description": "Lenguaje orientado a objetos usado en aplicaciones y servicios backend." },
-  { "id": 2, "name": "Spring Boot", "type": "Framework", "description": "Herramientas para crear aplicaciones Java y servicios web." },
-  { "id": 3, "name": "JavaScript", "type": "Lenguaje", "description": "Lenguaje que agrega interactividad a las aplicaciones web." },
-  { "id": 4, "name": "React", "type": "Framework", "description": "Biblioteca para construir interfaces mediante componentes." },
-  { "id": 5, "name": "React Router", "type": "Herramienta", "description": "Navegación por rutas para aplicaciones React." },
-  { "id": 6, "name": "HTML5", "type": "Tecnología", "description": "Estructura semántica para contenidos web." },
-  { "id": 7, "name": "CSS3", "type": "Tecnología", "description": "Estilos, animaciones y diseño adaptable para la web." },
-  { "id": 8, "name": "Vite", "type": "Herramienta", "description": "Servidor de desarrollo y empaquetador para frontend." },
-  { "id": 9, "name": "Git", "type": "Herramienta", "description": "Control de versiones para colaborar y seguir cambios." },
-  { "id": 10, "name": "GitHub", "type": "Herramienta", "description": "Plataforma para alojar repositorios y trabajar en equipo." },
-  { "id": 11, "name": "REST API", "type": "Concepto", "description": "Interfaz HTTP para intercambiar recursos entre sistemas." },
-  { "id": 12, "name": "SQL", "type": "Lenguaje", "description": "Lenguaje para consultar y gestionar bases de datos relacionales." },
-  { "id": 13, "name": "PostgreSQL", "type": "Tecnología", "description": "Sistema de gestión de bases de datos relacionales." },
-  { "id": 14, "name": "JSON", "type": "Formato", "description": "Formato liviano para representar datos estructurados." },
-  { "id": 15, "name": "Figma", "type": "Herramienta", "description": "Diseño colaborativo y prototipado de interfaces." },
-  { "id": 16, "name": "Responsive Design", "type": "Concepto", "description": "Adaptación de una interfaz a distintos tamaños de pantalla." },
-  { "id": 17, "name": "Accesibilidad web", "type": "Concepto", "description": "Prácticas para hacer los contenidos utilizables por más personas." },
-  { "id": 18, "name": "Web Audio API", "type": "Tecnología", "description": "API del navegador para sintetizar y procesar sonido." },
-  { "id": 19, "name": "LocalStorage", "type": "Tecnología", "description": "Almacenamiento local persistente disponible desde el navegador." },
-  { "id": 20, "name": "Vercel", "type": "Herramienta", "description": "Plataforma para publicar aplicaciones web." }
+  {
+    "id": 1,
+    "name": "Java",
+    "type": "Lenguaje",
+    "description": "Lenguaje orientado a objetos usado en aplicaciones y servicios backend.",
+    "details": "En un backend, las clases pueden representar datos y servicios. Su tipado ayuda a detectar incompatibilidades mientras se desarrolla."
+  },
+  {
+    "id": 2,
+    "name": "Spring Boot",
+    "type": "Framework",
+    "description": "Herramientas para crear aplicaciones Java y servicios web.",
+    "details": "Aporta configuración automática y dependencias listas para crear una aplicación. Se usa mucho para construir APIs REST con Java."
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "type": "Lenguaje",
+    "description": "Lenguaje que agrega interactividad a las aplicaciones web.",
+    "details": "Permite responder a eventos, validar formularios y actualizar la interfaz según las acciones de quien visita el sitio."
+  },
+  {
+    "id": 4,
+    "name": "React",
+    "type": "Framework",
+    "description": "Biblioteca para construir interfaces mediante componentes.",
+    "details": "Organiza la interfaz en componentes reutilizables. En este proyecto, React renderiza las páginas y las tarjetas del equipo."
+  },
+  {
+    "id": 5,
+    "name": "React Router",
+    "type": "Herramienta",
+    "description": "Navegación por rutas para aplicaciones React.",
+    "details": "Relaciona direcciones con pantallas sin recargar toda la aplicación. También permite que cada perfil tenga su propia URL."
+  },
+  {
+    "id": 6,
+    "name": "HTML5",
+    "type": "Tecnología",
+    "description": "Estructura semántica para contenidos web.",
+    "details": "Incluye elementos semánticos como main, nav, article y button para dar estructura y significado al contenido."
+  },
+  {
+    "id": 7,
+    "name": "CSS3",
+    "type": "Tecnología",
+    "description": "Estilos, animaciones y diseño adaptable para la web.",
+    "details": "Permite definir la apariencia, distribuir tarjetas y adaptar la interfaz a diferentes anchos de pantalla."
+  },
+  {
+    "id": 8,
+    "name": "Vite",
+    "type": "Herramienta",
+    "description": "Servidor de desarrollo y empaquetador para frontend.",
+    "details": "Durante el desarrollo ofrece recarga rápida; para publicar, genera los archivos optimizados que se sirven al navegador."
+  },
+  {
+    "id": 9,
+    "name": "Git",
+    "type": "Herramienta",
+    "description": "Control de versiones para colaborar y seguir cambios.",
+    "details": "Registra cambios en commits y permite volver a versiones anteriores o trabajar en ramas para tareas separadas."
+  },
+  {
+    "id": 10,
+    "name": "GitHub",
+    "type": "Herramienta",
+    "description": "Plataforma para alojar repositorios y trabajar en equipo.",
+    "details": "Aloja el repositorio remoto y facilita colaborar mediante ramas, issues y revisiones de cambios."
+  },
+  {
+    "id": 11,
+    "name": "REST API",
+    "type": "Concepto",
+    "description": "Interfaz HTTP para intercambiar recursos entre sistemas.",
+    "details": "Una API REST suele exponer recursos mediante URLs y métodos HTTP como GET, POST, PUT y DELETE."
+  },
+  {
+    "id": 12,
+    "name": "SQL",
+    "type": "Lenguaje",
+    "description": "Lenguaje para consultar y gestionar bases de datos relacionales.",
+    "details": "Consultas como SELECT, WHERE y JOIN permiten elegir, filtrar y relacionar información almacenada en tablas."
+  },
+  {
+    "id": 13,
+    "name": "PostgreSQL",
+    "type": "Tecnología",
+    "description": "Sistema de gestión de bases de datos relacionales.",
+    "details": "Además de guardar tablas, ofrece transacciones, restricciones e índices para mantener y consultar datos de forma confiable."
+  },
+  {
+    "id": 14,
+    "name": "JSON",
+    "type": "Formato",
+    "description": "Formato liviano para representar datos estructurados.",
+    "details": "Se usa para intercambiar datos estructurados entre servicios y para guardar conjuntos de datos locales que la interfaz puede recorrer."
+  },
+  {
+    "id": 15,
+    "name": "Figma",
+    "type": "Herramienta",
+    "description": "Diseño colaborativo y prototipado de interfaces.",
+    "details": "Permite diseñar pantallas, compartir componentes visuales y crear prototipos antes de implementarlos en código."
+  },
+  {
+    "id": 16,
+    "name": "Responsive Design",
+    "type": "Concepto",
+    "description": "Adaptación de una interfaz a distintos tamaños de pantalla.",
+    "details": "Combina diseños flexibles y media queries para que el contenido siga siendo legible en celulares, tabletas y escritorio."
+  },
+  {
+    "id": 17,
+    "name": "Accesibilidad web",
+    "type": "Concepto",
+    "description": "Prácticas para hacer los contenidos utilizables por más personas.",
+    "details": "Incluye prácticas como navegación con teclado, etiquetas comprensibles, texto alternativo y contraste suficiente."
+  },
+  {
+    "id": 18,
+    "name": "Web Audio API",
+    "type": "Tecnología",
+    "description": "API del navegador para sintetizar y procesar sonido.",
+    "details": "Con AudioContext y osciladores se pueden sintetizar sonidos breves, por ejemplo, una señal al activar un control."
+  },
+  {
+    "id": 19,
+    "name": "LocalStorage",
+    "type": "Tecnología",
+    "description": "Almacenamiento local persistente disponible desde el navegador.",
+    "details": "Guarda preferencias en el navegador entre visitas. No es adecuado para almacenar contraseñas ni datos sensibles."
+  },
+  {
+    "id": 20,
+    "name": "Vercel",
+    "type": "Herramienta",
+    "description": "Plataforma para publicar aplicaciones web.",
+    "details": "Publica el resultado de la compilación y permite que otras personas accedan al sitio mediante una URL de producción."
+  }
 ]
