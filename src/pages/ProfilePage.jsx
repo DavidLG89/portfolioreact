@@ -1,7 +1,54 @@
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import PageHeading from '../components/common/PageHeading.jsx';
 import { members } from '../data/members.js';
 import NotFoundPage from './NotFoundPage.jsx';
+
+const retroPalettes = {
+  arcade: { label: 'ARCADE NEON (DEFAULT)', primary: '#00f0ff', background: '#0b0d17' },
+  gameboy: { label: 'GAME BOY VERDE (1989)', primary: '#9bbc0f', background: '#0f380f' },
+  cga: { label: 'CGA RETRO (1981)', primary: '#ff55ff', background: '#0000aa' },
+  cyberpunk: { label: 'CYBERPUNK HIGH CONTRAST', primary: '#ffe600', background: '#000000' },
+};
+
+function RetroPaletteGame() {
+  const [paletteKey, setPaletteKey] = useState('arcade');
+  const palette = retroPalettes[paletteKey];
+
+  return (
+    <section className="profile-interactive-panel" aria-labelledby="retro-palette-heading">
+      <h2 className="interactive-title" id="retro-palette-heading">SIMULADOR DE PALETAS RETRO</h2>
+      <p className="interactive-desc">Elige una paleta y observa el cambio de colores en la vista previa.</p>
+      <div className="p1-palette-controls" role="group" aria-label="Elegir paleta de colores">
+        {Object.entries(retroPalettes).map(([key, option]) => {
+          const selected = paletteKey === key;
+          return (
+            <button
+              className={`btn-arcade ${selected ? 'btn-cyan active' : 'btn-outline'}`}
+              key={key}
+              type="button"
+              aria-pressed={selected}
+              onClick={() => setPaletteKey(key)}
+            >
+              {option.label}
+            </button>
+          );
+        })}
+      </div>
+      <div
+        className="p1-palette-preview"
+        style={{ backgroundColor: palette.background, borderColor: palette.primary, color: palette.primary }}
+        aria-live="polite"
+      >
+        <h3 className="p1-palette-preview-title">VISTA PREVIA EN TIEMPO REAL</h3>
+        <p className="p1-palette-preview-description">Paleta seleccionada: {palette.label}</p>
+        <code className="p1-palette-values" style={{ color: palette.primary, backgroundColor: palette.background }}>
+          --retro-primary: {palette.primary}; --retro-bg: {palette.background};
+        </code>
+      </div>
+    </section>
+  );
+}
 
 export default function ProfilePage({ onInsertCoin }) {
   const { id } = useParams();
@@ -47,6 +94,7 @@ export default function ProfilePage({ onInsertCoin }) {
           </div></section>
         </div>
       )}
+      {member.id === 'david' && <RetroPaletteGame />}
     </div>
   );
 }
