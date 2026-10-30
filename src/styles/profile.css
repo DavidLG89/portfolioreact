@@ -631,3 +631,30 @@
   border-color: var(--neon-yellow);
   box-shadow: 0 0 25px rgba(255, 230, 0, 0.15)
 }
+.profile-favorite-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.8rem;
+}
+
+.profile-favorite-card {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--border-arcade);
+  border-radius: 7px;
+  background: var(--bg-card);
+}
+
+.profile-favorite-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.profile-favorite-card figcaption {
+  padding: 0.55rem;
+  color: var(--text-main);
+  font-size: 0.85rem;
+  text-align: center;
+}
