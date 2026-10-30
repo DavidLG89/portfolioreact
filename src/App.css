@@ -714,6 +714,40 @@
   font-size: 0.68rem;
 }
 
+.render-tree-root,
+.render-tree-toggle {
+  cursor: pointer;
+  gap: 0.8rem;
+  text-align: left;
+  font: inherit;
+}
+
+.render-tree-root {
+  font-family: var(--font-arcade);
+  font-size: 0.68rem;
+}
+
+.render-tree-toggle:hover,
+.render-tree-root:hover {
+  border-color: var(--neon-yellow);
+}
+
+.render-tree-toggle:focus-visible,
+.render-tree-root:focus-visible {
+  outline: 2px solid var(--neon-yellow);
+  outline-offset: 3px;
+}
+
+.render-tree-indicator {
+  margin-left: auto;
+  color: var(--neon-green);
+  font-family: var(--font-arcade);
+}
+
+.render-tree-root[aria-expanded="false"]::after {
+  display: none;
+}
+
 .render-tree-root::after {
   position: absolute;
   top: 100%;
@@ -758,6 +792,17 @@
   left: -1.35rem;
   width: 1.35rem;
   border-top: 1px solid var(--border-arcade);
+  content: '';
+}
+
+.render-tree-list > .render-tree-item:last-child::after {
+  position: absolute;
+  top: calc(1.75rem + 1px);
+  bottom: 0;
+  left: calc(-1.35rem - 0.5px);
+  z-index: 1;
+  width: 2px;
+  background: var(--bg-cabinet);
   content: '';
 }
 
